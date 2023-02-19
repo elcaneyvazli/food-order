@@ -1,9 +1,12 @@
+html{
+  font-size: 62.5%;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 a {
@@ -15,12 +18,22 @@ a {
   box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+.btn{
+  @apply bg-primary py-[.8rem] px-[3rem] text-white rounded-3xl hover:opacity-70 transition-all;
 }
+
+.slick-dots {
+  @apply !flex justify-start w-full;
+}
+
+.slick-dots .slick-active div {
+  @apply bg-primary ;
+}
+
+.slick-dots div {
+  @apply !m-0 !mt-[10rem];
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
